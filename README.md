@@ -1,18 +1,12 @@
-## Getting Started
+# Universidad Politecnica Salesiana
+## Tarea BenchMarking Java 
+## Estudiante: Stephan Cedillo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Fecha: 2026-05-04
+### Descripcion: 
 
-## Folder Structure
+#### BenchMarking Java in Visual Studio Code
 
-The workspace contains two folders by default, where:
+Es una forma de medir el rendimiento de tu código Java utilizando Visual Studio Code. Usando nanoTime() para medir el tiempo de ejecución de tus algoritmos, puedes comparar diferentes tiempos. Esto te ayuda a identificar cuál es más eficiente en términos de tiempo de ejecución.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
