@@ -5,10 +5,12 @@ import controllers.SortMethods;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int size= 200000;
+        int size= 100;
         int[] arreglo = generate(size);
         int[] arreglo2 = arreglo.clone();
         int[] arreglo3 = Arrays.copyOf(arreglo, size);
+        int[] arreglo4 = arreglo.clone();
+        int[] arreglo5 = arreglo.clone();
 
         SortMethods metodos = new SortMethods();
         
@@ -28,6 +30,23 @@ public class App {
 
         Results rBubleAvz = BenchMarking.medirTiempo(funcionBubbleAvz,"Burbuja Avanzado",size);
         System.out.println(rBubleAvz.getName()+ " = " + rBubleAvz.getTime());
+
+        Callable<Void> funcionInsertion = ()->{
+            metodos.insertionSort(arreglo4, false);
+            return null;            
+        };
+
+        Results rInsertion = BenchMarking.medirTiempo(funcionInsertion,"Insertion ",size);
+        System.out.println(rInsertion.getName()+ " = " + rInsertion.getTime());
+
+
+        Callable<Void> funcionShell = ()->{
+            metodos.shellSort(arreglo5, false);
+            return null;            
+        };
+
+        Results rShell = BenchMarking.medirTiempo(funcionShell,"Shell",size);
+        System.out.println(rShell.getName()+ " = " + rShell.getTime());
 
     }
     public static int[] generate(int size){
